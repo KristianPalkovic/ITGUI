@@ -13,8 +13,10 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
     <Label textFill = "blueviolet" text = "ucime sa JavuFX"/>
-    <Label textFill = "red" text ="Kristian Palkovic"/>
-    <TextField focusTraversable="false" promptText="zadaj sem text" maxWidth="-Infinity"></TextField>
+    <Label textFill = "red" text ="Kristian Palkovic" fx:id="menoPriezvisko"/>
+    <TextField focusTraversable="false" promptText="zadaj sem text"
+               maxWidth="-Infinity" fx:id="prveTextovePole"></TextField>
     <Label text = "tu je prvy label" fx:id="welcomeText"/>
     <Button text="Moje Prvé Tlačidlo!" onAction="#onHelloButtonClick"/>
+    <Button text="zobrazenie textoveho pola" onAction="#zobrazPole"/>
 </VBox>
