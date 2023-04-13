@@ -8,4 +8,6 @@ module com.example.itgui {
 
     opens com.example.itgui to javafx.fxml;
     exports com.example.itgui;
+    exports com.example.itgui.basic;
+    opens com.example.itgui.basic to javafx.fxml;
 }

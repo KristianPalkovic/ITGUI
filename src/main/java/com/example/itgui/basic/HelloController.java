@@ -1,4 +1,4 @@
-package com.example.itgui;
+package com.example.itgui.basic;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
