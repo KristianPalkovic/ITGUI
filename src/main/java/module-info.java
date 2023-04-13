@@ -6,8 +6,8 @@ module com.example.itgui {
     requires com.dlsc.formsfx;
     requires validatorfx;
 
-    opens com.example.itgui to javafx.fxml;
-    exports com.example.itgui;
+    exports com.example.itgui.gridpane;
     exports com.example.itgui.basic;
     opens com.example.itgui.basic to javafx.fxml;
+    opens com.example.itgui.gridpane to javafx.fxml;
 }
