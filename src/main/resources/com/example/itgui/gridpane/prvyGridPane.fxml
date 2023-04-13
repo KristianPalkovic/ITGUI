@@ -6,9 +6,35 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.itgui.gridpane.PrvyGridPaneController"
-            prefHeight="400.0" prefWidth="600.0">
-<Label text = "Moj Grid Pane"/>
-</AnchorPane>
+<?import javafx.geometry.Insets?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.itgui.gridpane.PrvyGridPaneController"
+          prefHeight="400.0" prefWidth="600.0" gridLinesVisible="true" alignment="CENTER"
+            hgap="5" vgap = "5">
+
+    <columnConstraints>
+        <ColumnConstraints prefWidth="100"/>
+        <ColumnConstraints prefWidth="150"/>
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints prefHeight="35"/>
+        <RowConstraints prefHeight="35"/>
+        <RowConstraints prefHeight="35"/>
+        <RowConstraints prefHeight="35"/>
+    </rowConstraints>
+
+    <padding>
+        <Insets right = "10" bottom = "10" left = "10" top = "10"/>
+    </padding>
+
+    <Label text = "Login Window" GridPane.columnSpan="2" GridPane.halignment="CENTER"
+        GridPane.columnIndex="0" GridPane.rowIndex="0" fx:id = "loginText"></Label>
+    <Label text = "User ID" GridPane.columnIndex="0" GridPane.rowIndex="1"></Label>
+    <Label text = "Passsword" GridPane.columnIndex="0" GridPane.rowIndex="2"></Label>
+    <Button text = "OK" GridPane.columnIndex="0" GridPane.rowIndex="3" onAction="#process"></Button>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="pole"></TextField>
+    <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="password"></PasswordField>
+    <Button text = "Cancel" GridPane.columnIndex="1" GridPane.rowIndex="3"></Button>
+</GridPane>
