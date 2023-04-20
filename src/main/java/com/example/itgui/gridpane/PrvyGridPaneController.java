@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,10 +25,14 @@ public class PrvyGridPaneController {
     }
     @FXML
     public void process(){
-        if (){
-            System.out.println(passwordStore.get("john"));
+        if (passwordStore.containsKey(pole.getText())){
+           if(passwordStore.get(pole.getText()).equals(password.getText())){
+               loginText.setText("Spravne zadane udaje");
+           }else {
+               System.out.println("Zadane zle heslo");
+           }
         }else{
-            System.out.println("Neplatné zadanie mena alebo hesla");
+            System.out.println("Zadane neplatne meno");
         }
     }
 }
